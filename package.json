@@ -1,19 +1,27 @@
 {
-  "name": "layout-with-slide",
+  "name": "bootsrap-page",
   "version": "1.0.0",
-  "description": "Slider",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elnurmagerramli23/layout-with-slide.git"
+    "url": "git+https://github.com/PanahovKh/-Bootsrap-page.git"
   },
-  "author": "Elnur",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/elnurmagerramli23/layout-with-slide/issues"
+    "url": "https://github.com/PanahovKh/-Bootsrap-page/issues"
   },
-  "homepage": "https://github.com/elnurmagerramli23/layout-with-slide#readme"
+  "homepage": "https://github.com/PanahovKh/-Bootsrap-page#readme",
+  "description": "",
+  "dependencies": {
+    "gulp": "4.0.2",
+    "gulp-cli": "2.2.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-scss": "^1.4.0",
+    "scss": "0.2.4"
+  }
 }
