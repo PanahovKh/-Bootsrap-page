@@ -16,12 +16,16 @@
     "url": "https://github.com/PanahovKh/-Bootsrap-page/issues"
   },
   "homepage": "https://github.com/PanahovKh/-Bootsrap-page#readme",
-  "description": "",
+  "description": "gulp",
   "dependencies": {
-    "gulp": "4.0.2",
+    "gulp": "^4.0.2",
     "gulp-cli": "2.2.0",
     "gulp-csso": "^4.0.1",
-    "gulp-scss": "^1.4.0",
-    "scss": "0.2.4"
+    "gulp-sass": "^4.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^4.0.1"
   }
 }

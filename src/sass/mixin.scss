@@ -1,0 +1,24 @@
+@mixin media {
+    float: left;
+    width: 30%;
+    font-size: 1.7em;
+}
+@mixin head {
+    width: 100%;
+    padding: 10px 0.5% 0px 0.5%;
+    background: transparent;
+    float: left;
+    position: fixed;
+}
+
+@mixin about {
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+@mixin fixedd {
+    z-index: 5000;
+    background-color: white;
+    border-bottom: 1px solid silver;
+}

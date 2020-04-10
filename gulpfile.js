@@ -1,13 +1,48 @@
 const { src, dest, parallel } = require('gulp');
-const scss = require('gulp-scss');
+const sass = require('gulp-sass');
 const minifyCSS = require('gulp-csso');
+const concat = require('gulp-concat');
+// const browserSync = require('browser-sync').create();
 
-function returnCSS() {
-    return src('./sass/**/*.scss')
-    .pipe(scss())
-    .pipe(minifyCSS())
-    .pipe(dest('./build'))
+
+// function Sync () {
+//     browserSync.init({ 
+//         server:{
+//             baseDir:"./"
+//         },
+//     });
+//     gulp.watch('./src/**/*.scss');
+//     gulp.watch('./*.html').on('change', browserSync.reload);
+// }
+
+function returnHTML() {
+    return src('./*.html')
+    .pipe(dest('build'))
 }
 
+
+function returnCSS() {
+    return src('./src/**/*style.scss')
+    .pipe(sass())
+    .pipe(minifyCSS())
+    .pipe(dest('build'))
+    // .pipe(browserSync.stream())
+}
+
+function returnJs() {
+    return src('./src/**/*index.js', { sourcemaps: true })
+    .pipe(dest('build', { sourcemaps: true }))
+}
+
+function returnImages() {
+    return src('./src/**/*.jpg')
+    .pipe(dest('build'))
+}
+
+// exports.Sync = Sync;
+exports.returnImages = returnImages;
+exports.returnJs = returnJs;
+exports.returnHTML = returnHTML;
 exports.returnCSS = returnCSS;
-exports.default = parallel(returnCSS)
+exports.default = parallel(returnHTML, returnCSS, returnJs,returnImages);
+
