@@ -20,6 +20,10 @@ function returnHTML() {
     .pipe(dest('build'))
 }
 
+function botsrapCss () {
+    return src('./src/css/**')
+    .pipe(dest('build/css'))
+}
 
 function returnCSS() {
     return src('./src/**/*style.scss')
@@ -30,7 +34,7 @@ function returnCSS() {
 }
 
 function returnJs() {
-    return src('./src/**/*index.js', { sourcemaps: true })
+    return src('./src/**/*.js', { sourcemaps: true })
     .pipe(dest('build', { sourcemaps: true }))
 }
 
@@ -40,9 +44,10 @@ function returnImages() {
 }
 
 // exports.Sync = Sync;
+exports.botsrapCss = botsrapCss;
 exports.returnImages = returnImages;
 exports.returnJs = returnJs;
 exports.returnHTML = returnHTML;
 exports.returnCSS = returnCSS;
-exports.default = parallel(returnHTML, returnCSS, returnJs,returnImages);
+exports.default = parallel(returnHTML, returnCSS, returnJs,returnImages,botsrapCss);
 
